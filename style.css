@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+    padding: 0;
+    /* width: 100vw; */
+    height: 100vh;
+    background-image: linear-gradient(to right, rgb(43, 189, 247), rgb(0, 238, 255));
+}
+
+h1 {
+    text-align: center;
+    font-size: 4em;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.selecionado {
+    font-size:  2.5em;
+    margin-top: 300px;
+    font-weight: 600;
+}
+
+button {
+    width: 200px;
+    padding: 10px 20px;
+    font-size: 28px;
+    margin: 20px;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.63);
+    font-weight: 600;
+}
+
+#um {
+    background-color: green;
+}
+
+#dois {
+    background-color: red;
+}
+
+#tf, .tf {
+    background-color: rgb(16, 109, 231);
+}
+
+/* #tf {
+    position: fixed;
+    top: 300px;
+    left: 100px;
+} */
+
+button:hover {
+    transform: scale(1.1);
+}
