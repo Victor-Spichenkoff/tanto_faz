@@ -37,7 +37,7 @@ function mudarLocal() {
     tf.style.position = 'fixed'
     tf.style.zIndex = 10
 
-    if(altura < 87 || altura > totalAltura - 30) return mudarLocal()
+    if(altura < 87 || altura > totalAltura - 100) return mudarLocal()
     if(largura > totalLargura - 200) return mudarLocal()
 
     tf.style.top = altura + 'px'
