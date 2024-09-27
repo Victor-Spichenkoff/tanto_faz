@@ -1,20 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tanto Faz</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="normalize.css">
 </head>
+
 <body>
-    <h1 id="h1">Escolha algo:</h1>
-    <div id="container">
-        <!-- Escolhido Opção 2 -->
-        <button id="um">Opção 1</button>
-        <button id='dois'>Opção 2</button>
-        <button id="tf">Tanto Faz</button>
+    <h1 id="h1">Escolha algo!</h1>
+    <div class="action-area">
+        <form id="formulario" action="#">
+            <label for="op1">Opção 1</label>
+            <input type="text" id="op1" placeholder="opção 1">
+            <label for="op1">Opção 2</label>
+            <input type="text" id="op1" placeholder="opção 2">
+            <button id="confimar">Confirmar</button>
+        </form>
+
+        <div id="container">
+            <!-- Escolhido Opção 2 -->
+            <button id="um" class="opcoes">Opção 1</button>
+            <button id='dois' class="opcoes">Opção 2</button>
+            <button id="tf" class="tf">Tanto Faz</button>
+
+        </div>
+
     </div>
 
+    <footer>
+        <a href="/v1/index.html">V1</a>
+    </footer>
+
     <script src='code.js'></script>
+    <script src='animation.js'></script>
+    <script src='fugir.js'></script>
 </body>
+
 </html>

@@ -1,0 +1,1 @@
+# Site para impedir que a pessoa responda "Tanto Faz"

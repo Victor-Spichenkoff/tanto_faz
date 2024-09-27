@@ -1,0 +1,46 @@
+/* Estilização básica e responsiva */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    /* position: absolute; */
+    top: 0px;
+}
+
+label {
+    font-size: 26px;
+    color: whitesmoke;
+}
+
+input[type="text"] {
+    font-size: 16px;
+    padding: 12px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+    border-radius: 7px;
+}
+
+input[type="text"]:focus {
+    border-bottom: 2px solid #007bff;
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+form>button {
+    margin: 55px auto 16px auto;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

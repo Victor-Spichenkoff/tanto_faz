@@ -1,23 +1,58 @@
+html {
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
 body{
+    color: whitesmoke;
+    border: 2px 2px 2px 2px black;
+    min-height: 100vh;
+    transition: all ease 1000s;
     margin: 0;
     padding: 0;
-    /* width: 100vw; */
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #040375 0%, #08025c 100%);
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
     height: 100vh;
-    background-image: linear-gradient(to right, rgb(43, 189, 247), rgb(0, 238, 255));
+    overflow: hidden;
+
+    max-width: 450px;
+    border: 2px 2px 2px 2px black;
 }
 
 h1 {
     text-align: center;
     font-size: 4em;
+    color: whitesmoke;
 }
 
+.action-area {
+    position: relative;
+    height: 100%;
+}
+
+
 #container {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-    
+
+
+    gap: 12px;
+    width: 100%;
+    max-width: 300px;
+
+
+    position: absolute;
+    top: 0px;
 }
 
 .selecionado {
@@ -58,3 +93,46 @@ button {
 button:hover {
     transform: scale(1.1);
 }
+
+
+
+  button.opcoes {
+    background-color: #28a745;
+  }
+  
+  button.tf {
+    background-color: #ffb400;
+  }
+  
+  /* Animação ao passar o cursor nos botões */
+  button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  button.opcoes:hover {
+    background-color: #218838;
+  }
+  
+  button.tf:hover {
+    background-color: #ff8c00;
+  }
+  
+  /* Adaptando ao toque em dispositivos móveis */
+  button:active {
+    transform: scale(0.98);
+  }
+  
+
+  footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    text-decoration: none;
+    font-size: large;
+    padding: 5px 10px;
+  }
