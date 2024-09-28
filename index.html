@@ -5,27 +5,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tanto Faz</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="form.css">
-    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/animated.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 </head>
 
 <body>
     <h1 id="h1">Escolha algo!</h1>
+    <div id="alert-container"></div>
     <div class="action-area">
+
         <form id="formulario" action="#">
-            <label for="op1">Opção 1</label>
-            <input type="text" id="op1" placeholder="opção 1">
-            <label for="op1">Opção 2</label>
-            <input type="text" id="op1" placeholder="opção 2">
+            <div id="input-area">
+                <label for="op1" id="lab1">Opção 1</label>
+                <input type="text" autocomplete="off" id="op1" placeholder="opção 1" class="optionInput">
+                <label for="op2" id="lab2">Opção 2</label>
+
+                <input type="text" autocomplete="off" id="op2" placeholder="opção 2" class="optionInput">
+
+            </div>
+
+            <div class="add-remove">
+                <button id="plus">+</button>
+                <button id="less">-</button>
+            </div>
+
             <button id="confimar">Confirmar</button>
         </form>
 
         <div id="container">
             <!-- Escolhido Opção 2 -->
-            <button id="um" class="opcoes">Opção 1</button>
-            <button id='dois' class="opcoes">Opção 2</button>
+            <!-- <button class="option1 opcoes">Opção 1</button>
+            <button class="option2 opcoes">Opção 2</button> -->
             <button id="tf" class="tf">Tanto Faz</button>
+            <button id="tf" class="tf">Não sei</button>
+            <button id="tf" class="tf">Mé</button>
 
         </div>
 
@@ -35,9 +51,10 @@
         <a href="/v1/index.html">V1</a>
     </footer>
 
-    <script src='code.js'></script>
-    <script src='animation.js'></script>
-    <script src='fugir.js'></script>
+    <script src='js/animation.js'></script>
+    <script src='js/form.js'></script>
+    <script src='js/code.js'></script>
+    <script src='js/fugir.js'></script>
 </body>
 
 </html>
