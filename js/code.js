@@ -11,8 +11,8 @@ const addClickEventForButtons = () => {
     const validOptionsButtons = document.querySelectorAll(".opcoes")
     
     validOptionsButtons.forEach((button, i) => {
-        if(i > validOptionsButtons.length - 2)//para ele não mexer quando um sair
-            fixElement(button)
+        // if(i > validOptionsButtons.length - 2)//para ele não mexer quando um sair
+        //     fixElement(button)
 
         const label = button.innerText
         console.log(label)    
@@ -87,6 +87,14 @@ const resetAll = () => {
 
     optionsButtonArea.innerHTML = ""
 
+
+    const allOldOptions = document.querySelectorAll(".opcoes")
+
+    allOldOptions.forEach(oldOption => {
+        oldOption.remove()
+    })
+
+    optionsLabels = []
 }
 
 resetBtn.addEventListener("click", resetAll)

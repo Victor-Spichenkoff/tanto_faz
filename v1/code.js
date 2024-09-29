@@ -34,7 +34,8 @@ function mudarLocal() {
 
     // tf1.style.display = 'none'
 
-    tf.style.position = 'fixed'
+    tf.style.position = 'absolute'
+    // tf.style.position = 'fixed'
     tf.style.zIndex = 10
 
     if(altura < 87 || altura > totalAltura - 100) return mudarLocal()

@@ -66,15 +66,19 @@ const createOptionButton = (id, label) => {
 
 
 const createOptionsButtons = () => {
-    (optionsLabels)
-    optionsLabels.reverse()
+    let id = optionsLabels.length
 
-    optionsLabels.forEach((label, index) => {
-        let id = index + 1
-        if(id > 4)  id -= 4
-        if(id > 8) id -= 8
+
+    optionsLabels.reverse().forEach((label, index) => {
+        
+        // if(id > 4)  id -= 4
+        // if(id > 8) id -= 8
+        if(id > 4) id = 1
+        if(id <= 0) id = 4
     
         createOptionButton(id, label)
+
+        id--
     })
 }
 
