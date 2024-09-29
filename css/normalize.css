@@ -6,7 +6,7 @@ html {
     align-items: start;
 }
 
-body{
+body {
     color: whitesmoke;
     border: 2px 2px 2px 2px black;
     min-height: 100vh;
@@ -14,7 +14,9 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #040375 0%, #08025c 100%);
+    background: linear-gradient(135deg, #0474d5, #0535ad);
+    /* background-image: url(https://img.freepik.com/free-photo/3d-rendered-abstract-design-elements-assortment_23-2148996789.jpg?w=740&t=st=1727561672~exp=1727562272~hmac=9aadc8034f31c8a6a87288b04df22f8f41ee3b09c0a0895940ed90fd340cd774); */
+    background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
@@ -57,5 +59,9 @@ button {
     color: white;
     background-color: #007bff;
     transition: background-color 0.3s ease, transform 0.2s ease;
-  }
-  
+}
+
+
+button:hover {
+    filter: brightness(117%)
+}

@@ -41,7 +41,7 @@ form>button {
     margin: 55px auto 16px auto;
 }
 
-button:hover {
+form button:hover {
     background-color: #0056b3;
 }
 

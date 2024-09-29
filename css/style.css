@@ -12,11 +12,10 @@ h1 {
 
 
 #container {
-  display: none;
+  display: none; 
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 
   gap: 12px;
   width: 100%;
@@ -58,6 +57,9 @@ button {
   background-color: red;
 }
 
+
+
+
 #tf,
 .tf {
   background-color: rgb(16, 109, 231);
@@ -75,23 +77,15 @@ button:hover {
 
 
 
-button.opcoes {
-  background-color: #28a745;
-}
-
 button.tf {
   background-color: #ffb400;
 }
 
 /* Animação ao passar o cursor nos botões */
 button:hover {
-  background-color: #0056b3;
   transform: scale(1.05);
 }
 
-button.opcoes:hover {
-  background-color: #218838;
-}
 
 button.tf:hover {
   background-color: #ff8c00;
@@ -101,6 +95,25 @@ button.tf:hover {
 button:active {
   transform: scale(0.98);
 }
+
+
+#choosen {
+  display: none;
+  color: white;
+  font-size: 40px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+
+#choosen button {
+  align-self: flex-end;
+  margin-bottom: 200px;
+  background-color: rgb(37, 173, 25);
+}
+
 
 
 footer {

@@ -1,6 +1,7 @@
 const moreInputBtn = document.querySelector("#plus")
 const lessBtn = document.querySelector("#less")
 const inputsArea = document.querySelector("#input-area")
+const optionsButtonArea = document.getElementById("options-buttons-area")
 
 var optionsLabels = []
 var lastInputCount = 2
@@ -31,10 +32,8 @@ const addOptionInput = () => {
 
 
 const removeLastInput = () => {
-    console.log(lastInputCount)
     let removedInput = document.getElementById(`op${lastInputCount}`)
     let removedLabel = document.getElementById(`lab${lastInputCount}`)
-    console.log(removedInput)
 
 
     removedInput.classList.remove("create")
@@ -42,8 +41,6 @@ const removeLastInput = () => {
 
     removedInput.classList.add("disintegrate")
     removedLabel.classList.add("disintegrate")
-
-
 
 
     setTimeout(() => {
@@ -62,15 +59,17 @@ const createOptionButton = (id, label) => {
     button.textContent = label
   
     //tudo==containter area
+    // optionsButtonArea.append(button)
     tudo.prepend(button)
-    // tudo.appendChild(button)
 }
 
 
 
 const createOptionsButtons = () => {
+    (optionsLabels)
+    optionsLabels.reverse()
 
-    optionsLabels.reverse().forEach((label, index) => {
+    optionsLabels.forEach((label, index) => {
         let id = index + 1
         if(id > 4)  id -= 4
         if(id > 8) id -= 8
@@ -81,9 +80,10 @@ const createOptionsButtons = () => {
 
 const handleConfirmClick = () => {
     const optionsElements = document.querySelectorAll(".optionInput")
+
     try {
         optionsElements.forEach((option, i) => {
-            console.log(!option)
+            (!option)
             if(!option.value)
                 throw `Escreva algo na opção ${i + 1}`
 
@@ -92,6 +92,7 @@ const handleConfirmClick = () => {
         })
         
     } catch(e) {
+        (e)
         if(typeof e == "string")
             return showAlert("error", e)
         
@@ -101,6 +102,7 @@ const handleConfirmClick = () => {
 
     createOptionsButtons()
     showOptions()
+    addClickEventForButtons()
 }
 
 

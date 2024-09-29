@@ -8,10 +8,13 @@ const confirmBtn = document.querySelector("#confimar")
 const showOptions = () => {
     buttonsArea.classList.remove("show")
     formArea.classList.remove("hide")
+    formArea.classList.remove("show")
     buttonsArea.classList.add("show")
     formArea.classList.add("hide")
 
-    console.log(buttonsArea.classList)
+    setTimeout(() => {
+      formArea.style.display = "none"
+    }, 600)
 }
 
 
