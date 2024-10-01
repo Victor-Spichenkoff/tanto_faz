@@ -3,6 +3,7 @@ const lessBtn = document.querySelector("#less")
 const inputsArea = document.querySelector("#input-area")
 const optionsButtonArea = document.getElementById("options-buttons-area")
 
+
 var optionsLabels = []
 var lastInputCount = 2
 
@@ -52,6 +53,7 @@ const removeLastInput = () => {
 }
 
 
+
 const createOptionButton = (id, label) => {
     const button = document.createElement('button')
     button.classList.add(`option${id}`)
@@ -67,7 +69,6 @@ const createOptionButton = (id, label) => {
 
 const createOptionsButtons = () => {
     let id = optionsLabels.length
-
 
     optionsLabels.reverse().forEach((label, index) => {
         
@@ -107,6 +108,8 @@ const handleConfirmClick = () => {
     createOptionsButtons()
     showOptions()
     addClickEventForButtons()
+    rebuildWrongButtons()
+    // addFixForWrong()
 }
 
 
