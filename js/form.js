@@ -114,7 +114,7 @@ const handleConfirmClick = () => {
 
 
 
-confirmBtn.addEventListener("click", handleConfirmClick)
+confirmBtn.addEventListener("click", handleConfirmClick())
 
 moreInputBtn.addEventListener("click", addOptionInput)
 lessBtn.addEventListener("click", removeLastInput)

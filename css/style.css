@@ -1,3 +1,7 @@
+:root {
+  --btn-height: 45px
+}
+
 h1 {
   text-align: center;
   font-size: 4em;
@@ -62,7 +66,16 @@ button {
   /* background-color: red; */
 }
 
+#wrong-containter {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
 
+#wrong-containter > div {
+  min-height: calc(var(--btn-height) + 12px);
+  min-width: 1px;
+}
 
 
 #tf1 {

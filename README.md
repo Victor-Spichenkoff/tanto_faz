@@ -2,4 +2,4 @@
 
 # TO_DO
 - Deixar o tfs parados mesmo se um deles sair do lugar, deixar um vazio 
-- Com o uso do rebuild, ele não está aplicando as funções nos tf
+- Agora, ele usa o div com min height w width
