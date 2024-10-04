@@ -9,18 +9,18 @@ const tudo = document.getElementById('container')
 
 
 const fixElement = (element) => {
-        // Obter as coordenadas atuais do elemento em relação ao topo e esquerda da página
-        const rect = element.getBoundingClientRect();
+    // Obter as coordenadas atuais do elemento em relação ao topo e esquerda da página
+    const rect = element.getBoundingClientRect();
 
 
-        // Salvar a posição original do elemento
-        const top = rect.top + window.scrollY;
-        const left = rect.left + window.scrollX;
-    
-        // Definir o estilo para manter o elemento na posição absoluta
-        element.style.position = 'fixed';
-        element.style.top = `${top}px`;
-        element.style.left = `${left}px`;
+    // Salvar a posição original do elemento
+    const top = rect.top + window.scrollY;
+    const left = rect.left + window.scrollX;
+
+    // Definir o estilo para manter o elemento na posição absoluta
+    element.style.position = 'fixed';
+    element.style.top = `${top}px`;
+    element.style.left = `${left}px`;
 }
 
 const addFixForWrong = () => {
@@ -32,25 +32,25 @@ const addFixForWrong = () => {
 
 const addClickEventForButtons = () => {
     const validOptionsButtons = document.querySelectorAll(".opcoes")
-    
+
     validOptionsButtons.forEach((button, i) => {
         const label = button.innerText
-    
+
         button.addEventListener("click", () => {
             selecionadoNormal(label)
         }
         )
     })
-}    
+}
 
 const addEventClickForWrongs = () => {
     const allWrongOptions = document.querySelectorAll(".tf")
-    
+
     allWrongOptions.forEach(wrongOption => {
         wrongOption.addEventListener("click", () => mudarLocalItem(wrongOption))
         console.log("ACiocionado em:" + wrongOption)
     })
-    
+
 }
 
 
@@ -95,17 +95,17 @@ const rebuildWrongButtons = () => {
         wrongOption.remove()
     })
 
-    for(let count of [1, 2, 3]) {
+    for (let count of [1, 2, 3]) {
         const button = document.createElement("button")
         const father = document.querySelector(`#wrong-area-${count}`)
 
         button.id = `tf${count}`
-        
+
         let label = ""
 
-        if(count == 1) label = "Tanto Faz"
-        if(count == 2) label = "Não sei"
-        if(count == 3) label = "Mé"
+        if (count == 1) label = "Tanto Faz"
+        if (count == 2) label = "Não sei"
+        if (count == 3) label = "Mé"
 
         button.innerHTML = label
         button.classList.add("tf")
@@ -121,11 +121,11 @@ const resetAll = () => {
     //tirar as classes
     const allHidden = document.querySelectorAll(".hide")
     const allShow = document.querySelectorAll(".show")
-    for(let ah of allHidden)
+    for (let ah of allHidden)
         ah.classList.remove("hide")
-    for(let as of allShow)
+    for (let as of allShow)
         as.classList.remove("show")
-        
+
     tudo.classList.remove('selecionado')
 
     //FORM
@@ -147,27 +147,27 @@ const resetAll = () => {
 
     optionsButtonArea.innerHTML = ""
 
-    
+
     const allOldOptions = document.querySelectorAll(".opcoes")
-    
+
     allOldOptions.forEach(oldOption => {
         oldOption.remove()
     })
 
     optionsLabels = []
-    
-    
+
+
     //wrongs
     // resetWrongButtons()
     removeWrong()
 
     //Tela final
     choosenLabelArea.innerHTML = ""
- 
+
     // choosenArea.style.display = "none"
 
     tudo.style.display = "none"
-    
+
 }
 
 resetBtn.addEventListener("click", resetAll)

@@ -14,8 +14,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #0474d5, #0535ad);
-    /* background-image: url(https://img.freepik.com/free-photo/3d-rendered-abstract-design-elements-assortment_23-2148996789.jpg?w=740&t=st=1727561672~exp=1727562272~hmac=9aadc8034f31c8a6a87288b04df22f8f41ee3b09c0a0895940ed90fd340cd774); */
+    /* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(100,43,115,1) 0%, rgba(4,0,4,1) 90% ); */
+    background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -41,7 +41,9 @@ a:visited {
     color: inherit;
 }
 
-
+a:hover {
+    filter: brightness(90%);
+}
 
 ::-webkit-scrollbar {
     width: 0px;

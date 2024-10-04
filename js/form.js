@@ -69,16 +69,22 @@ const createOptionButton = (id, label) => {
 
 const createOptionsButtons = () => {
     let id = optionsLabels.length
+    while (id >2) {
+        id --
+    }
+    console.log(id)
+
+    // let id = 0
 
     optionsLabels.reverse().forEach((label, index) => {
-        
-        // if(id > 4)  id -= 4
-        // if(id > 8) id -= 8
+        // if(id > 3)  id -= 3
+        // if(id > 7) id -= 7
         if(id > 4) id = 1
         if(id <= 0) id = 4
-    
+        // id++
+        
         createOptionButton(id, label)
-
+        
         id--
     })
 }
@@ -113,8 +119,7 @@ const handleConfirmClick = () => {
 }
 
 
-
-confirmBtn.addEventListener("click", handleConfirmClick())
+confirmBtn.addEventListener("click", handleConfirmClick)
 
 moreInputBtn.addEventListener("click", addOptionInput)
 lessBtn.addEventListener("click", removeLastInput)
